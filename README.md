@@ -6,7 +6,7 @@ To use you need the following:
 
 ```
 source("conumee_overlay/composite_conumee.R")
-composite_genomeplot(sample_ids, ctrl_ids, anno, minfi.data, savename, ylim, cols, chr, chrX, chrY, centromere, main)
+composite_cnv(sample_ids, ctrl_ids, anno, minfi.data, savename, ylim, cols, chr, chrX, chrY, centromere, main)
 ```
 
 ## Notes:
