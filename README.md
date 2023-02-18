@@ -18,4 +18,4 @@ conumee using CNV.load()
 
 - `savename` is the path to an image file where you want to save the output
 
-- `chylim, cols, chr, chrX, chrY, centromere, main` have same definitions as in CNV.genomeplot(). Default values are identical to the default values in CNV.genomeplot()
+- `chylim, cols, chr, chrX, chrY, centromere` have same definitions as in CNV.genomeplot(). `main` refers to the title the plot. By default, it is "Composite CNV plot". Default values of other arguments is identical to the default values in CNV.genomeplot(). 
