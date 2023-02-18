@@ -1,5 +1,16 @@
+.cumsum0 <- function(x, left = TRUE, right = FALSE, n = NULL) {
+    xx <- c(0, cumsum(as.numeric(x)))
+    if (!left) 
+        xx <- xx[-1]
+    if (!right) 
+        xx <- head(xx, -1)
+    names(xx) <- n
+    xx
+}
+
 composite_cnv <- function(sample_ids, ctrl_ids, anno, minfi.data, savename,
-                         ylim, cols, chr, chrX, chrY, centromere, main){
+                         ylim=c(-1.25, 1.25), cols=c("red", "red", "lightgrey", "green", "green"), 
+                          chr="all", chrX=TRUE, chrY=TRUE, centromere=TRUE, main="Composite CNV plot"){
         for (sample in sample_ids){
             print(paste("processing sample", sample))
             x <- CNV.fit(minfi.data[sample], minfi.data[ctrls], anno)
